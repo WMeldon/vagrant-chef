@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
 
   config.omnibus.chef_version = :latest
 
-  config.librarian_chef.cheffile_dir = "chef"
+  config.librarian_chef.cheffile_dir = "vagrant-chef/chef"
 
   config.vm.provision :chef_solo do |chef|
 
