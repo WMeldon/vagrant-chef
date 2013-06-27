@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook "apache2"
+
+cookbook "apt"
+
+cookbook "database"
+
+cookbook "dmg"
+
+cookbook "git"
+
+cookbook "java"
+
+cookbook "mysql"
+
+cookbook "openssl"
+
+cookbook "php"
+
+cookbook "users"
+
+cookbook "yum"
+
+cookbook "build-essential"
+
+cookbook "chef-php-extra",
+    :github => "inviqa/chef-php-extra"
+
+cookbook "composer",
+    :github => "zircote/chef-composer"
+
+cookbook "phpunit",
+    :github => "escapestudios/chef-phpunit"
+
+cookbook "curl",
+    :github => "phlipper/chef-curl"
+
+cookbook "mysql-databases",
+    :path => "application-cookbooks/mysql-databases"
+
+cookbook "apache-sites",
+    :path => "application-cookbooks/apache-sites"
