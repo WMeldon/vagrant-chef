@@ -44,7 +44,7 @@ This should work on any Windows, OSX, or Linux box.
 
 - [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
-- [Install Vagrant(1.2.2)](http://downloads.vagrantup.com/)
+- [Install Vagrant(1.2.2)](https://www.virtualbox.org/wiki/Download_Old_Builds_4_2) Because [more reasons](http://serverfault.com/questions/518221/vagrant-up-fails-with-ns-error-call-failed-error)
 
 - [Install Chef Client(11.4.4)](http://www.opscode.com/chef/install/)
 
