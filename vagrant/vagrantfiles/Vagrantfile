@@ -1,13 +1,20 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+base_box = ENV['VAGRANT_BOX'] || 'raring64-rubygem185'
+base_box_url = ENV['VAGRANT_BOX_URL'] || 'https://www.dropbox.com/s/7nkiaxm1tepsi4a/raring64-rubygem185.box'
+
+home_path = ENV['HOME']
+
 Vagrant.configure("2") do |config|
-  config.vm.box = "raring64-rubygem185"
-  config.vm.box_url = 'https://www.dropbox.com/s/7nkiaxm1tepsi4a/raring64-rubygem185.box'
+  config.vm.box = base_box
+  config.vm.box_url = base_box_url
 
   # for best results add "10.10.10.10 app.local"
   # or something like it to your hosts file
   config.vm.network :private_network, ip: "10.10.10.10"
+
+  config.vm.synced_folder "", "/vagrant", :extra => "dmode=777,fmode=777"
 
   config.omnibus.chef_version = :latest
 
